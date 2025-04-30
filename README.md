@@ -1,0 +1,1 @@
+A dynamic website where the html is only rendered using javascript and everything is bundled together by webpack
