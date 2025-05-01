@@ -1,0 +1,137 @@
+/*
+#89B6A5
+#4C3B4D
+#C9EDDC
+#82968C
+#6A706E
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../assets/fonts/Roboto-Regular.woff);
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    color: #C9EDDC;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+header {
+    display: flex;
+    flex: 1 1 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6A706E;
+    padding: 0px 10px;
+}
+
+footer {
+    display: flex;
+    flex: 1 1 0;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #6A706E;
+}
+
+#content {
+    display: flex;
+    flex: 8 1 0;
+    justify-content: center;
+    background-image: url(../assets/images/sea-background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#home-block, #about-block, #menu-block {
+    background-color: #82968C;
+    border: 2px solid #4C3B4D;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu-block {
+    justify-content: start;
+}
+
+h2 {
+    font-size: 3rem;
+    flex: 2 1 0;
+}
+
+#choice-block {
+    flex: 8 1 0;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.choices {
+    flex: 1 1 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.choices > p {
+    font-size: 2rem;
+    flex: 2 1 0;
+    align-self: center;
+    justify-self: center;
+}
+
+.choices > img {
+    height: auto;
+    width: 600px;
+    flex: 8 1 0;
+}
+
+#about-block {
+    justify-content: center;
+    align-items: center;
+}
+
+#home-block, #about-block > p {
+    font-size: 2rem;
+}
+
+#home-picture {
+    height: auto;
+    width: 40%;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    background-color: #4C3B4D;
+    border: solid 2px #C9EDDC;
+    padding: 5px;
+    border-radius: 5px;
+    transition: filter 0.2s ease;
+}
+
+button:hover {
+    filter: brightness(1.2);
+}
+
+button:active {
+    filter: brightness(0.8);
+}

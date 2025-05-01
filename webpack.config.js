@@ -1,10 +1,11 @@
 // webpack.config.js
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { type } = require("os");
 const path = require("path");
 
 module.exports = {
     mode: "development",
-    entry: "./src/index.js",
+    entry: "./src/scripts/index.js",
     output: {
         filename: "main.js",
         path: path.resolve(__dirname, "dist"),
@@ -19,4 +20,20 @@ module.exports = {
             template: "./src/template.html",
         }),
     ],
+    module: {
+        rules: [
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+            },
+            {
+                test: /\.html$/i,
+                loader: "html-loader",
+            },
+            {
+                test: /\.(jpg)$/i,
+                type: "asset/resource",
+            }  
+        ],
+    },
 };
